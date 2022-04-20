@@ -13,5 +13,5 @@ UC Berkeley and Microsoft Research<br>
 
 Code will be released soon.
 <p align="center">
-  <img align="center" src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/results.png" width="650">
+  <img align="center" src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/result.png" width="650">
 </p>
