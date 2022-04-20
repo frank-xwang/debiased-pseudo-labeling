@@ -7,8 +7,11 @@ This repository contains the code (in PyTorch) for the model introduced in the f
 UC Berkeley and Microsoft Research<br>
 [CVPR 2022](https://cvpr2022.thecvf.com)
 
-![](https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/DebiasPL.gif)
+<p align="center">
+  <img src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/DebiasPL.gif" width="650">
+</p>
 
 Code will be released soon.
-
-![](https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/results.png)
+<p align="center">
+  <img align="center" src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/results.png" width="650">
+</p>
