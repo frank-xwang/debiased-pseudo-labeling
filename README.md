@@ -8,7 +8,7 @@ UC Berkeley and Microsoft Research<br>
 [CVPR 2022](https://cvpr2022.thecvf.com)
 
 <p align="center">
-  <img src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/DebiasPL.gif" width="650">
+  <img src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/DebiasPL.gif" width=70%>
 </p>
 
 Code will be released soon.
