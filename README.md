@@ -1,5 +1,10 @@
 # Debiased Pseudo-Labeling
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/debiased-learning-from-naturally-imbalanced/few-shot-image-classification-on-imagenet-0)](https://paperswithcode.com/sota/few-shot-image-classification-on-imagenet-0?p=debiased-learning-from-naturally-imbalanced)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/debiased-learning-from-naturally-imbalanced/semi-supervised-image-classification-on-16)](https://paperswithcode.com/sota/semi-supervised-image-classification-on-16?p=debiased-learning-from-naturally-imbalanced)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/debiased-learning-from-naturally-imbalanced/semi-supervised-image-classification-on-1)](https://paperswithcode.com/sota/semi-supervised-image-classification-on-1?p=debiased-learning-from-naturally-imbalanced)
+
+
 This repository contains the code (in PyTorch) for the model introduced in the following paper:
 
 **Debiased Learning from Naturally Imbalanced Pseudo-Labels**<br>
@@ -13,6 +18,6 @@ UC Berkeley and Microsoft Research<br>
 
 Code will be released soon.
 <p align="center">
-  <img align="center" src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/result.png" width=60%>
-  <img align="center" src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/ZSL-DomainShift.png" width=35%>
+  <img align="center" src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/result.png" width=57%>
+  <img align="center" src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/ZSL-DomainShift.png" width=40%>
 </p>
