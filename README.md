@@ -11,7 +11,7 @@ This repository contains the code (in PyTorch) for the model introduced in the f
 UC Berkeley and Microsoft Research<br>
 [CVPR 2022](https://cvpr2022.thecvf.com)
 
-[Preprint](https://arxiv.org/abs/2201.01490) | [Citation](#citation)
+[Project Page](https://people.eecs.berkeley.edu/~xdwang/projects/DebiasPL/) | [Preprint](https://arxiv.org/abs/2201.01490) | [Citation](#citation)
 
 <p align="center">
   <img src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/DebiasPL.gif" width=70%>
@@ -86,12 +86,13 @@ bash scripts/1perc-ssl/train_DebiasPL.sh
 | Method                | epochs            | 0.2% labels       | 1% labels 
 | --------------        | ----------------  | ----------------  | ----------------
 | FixMatch w/ EMAN      | 50                | 43.6%             | 60.9% 
-| DebiasPL              | 50                | [52.0%](https://drive.google.com/file/d/1_mCbwMokj8WFE5H0LN77TbuWxKLBdGRV/view?usp=sharing)  / [log](https://drive.google.com/file/d/1Wy6hJgvcuWc2sgwMq_fwq9OseTVVmgU9/view?usp=sharing) | [65.6%](https://drive.google.com/file/d/1QXO7icAonToHhjmBMNn3rwk7Qf1c0LG9/view?usp=sharing) / [log](https://drive.google.com/file/d/1FmBJqb5YP1PZaQFW5AIFm4JO9c4xGcx8/view?usp=sharing)
+| DebiasPL (reported)   | 50                | 51.6%             | 65.3% 
+| DebiasPL (reproduced) | 50                | [52.0%](https://drive.google.com/file/d/1_mCbwMokj8WFE5H0LN77TbuWxKLBdGRV/view?usp=sharing)  / [log](https://drive.google.com/file/d/1Wy6hJgvcuWc2sgwMq_fwq9OseTVVmgU9/view?usp=sharing) | [65.6%](https://drive.google.com/file/d/1QXO7icAonToHhjmBMNn3rwk7Qf1c0LG9/view?usp=sharing) / [log](https://drive.google.com/file/d/1FmBJqb5YP1PZaQFW5AIFm4JO9c4xGcx8/view?usp=sharing)
 
-The results reproduced by this codebase are often slightly higher than what was reported in the paper (52.0 vs 51.6; 65.6 vs. 65.3). We find it beneficial to apply cross-level instance-group discrimination loss [CLD](https://arxiv.org/pdf/2008.03813.pdf) to unlabeled instances to leverage their information fully. You can set lambda-cld as 0 to disable CLD loss.
+The results reproduced by this codebase are often slightly higher than what was reported in the paper (52.0 vs 51.6; 65.6 vs. 65.3). We find it beneficial to apply cross-level instance-group discrimination loss [CLD](https://arxiv.org/pdf/2008.03813.pdf) to unlabeled instances to leverage their information fully. 
 
 ### Zero-shot learning
-Please [download](https://drive.google.com/drive/folders/1mAB49eceMmu0hHfEofcNOCzi1nTxsEon?usp=sharing) zero-shot predictions with a pre-trained CLIP (backbone: RN50) model and put them under net/indexes/. Then run experiments on ImageNet-1k with:
+Please [download](https://drive.google.com/drive/folders/1mAB49eceMmu0hHfEofcNOCzi1nTxsEon?usp=sharing) zero-shot predictions with a pre-trained CLIP (backbone: RN50) model and put them under imagenet/indexes/. Then run experiments on ImageNet-1k with:
 ```
 bash scripts/zsl/train_DebiasPL.sh
 ```
