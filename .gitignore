@@ -1,0 +1,7 @@
+__pycache__/*
+*/__pycache__
+checkpoints
+imagenet
+pretrained
+scripts/0.2perc-ssl/train_DebiasPL_w_CLIP.sh
+scripts/1perc-ssl/train_DebiasPL_w_CLIP.sh
