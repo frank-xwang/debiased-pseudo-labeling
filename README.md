@@ -11,7 +11,7 @@ This repository contains the code (in PyTorch) for the model introduced in the f
 UC Berkeley and Microsoft Research<br>
 [CVPR 2022](https://cvpr2022.thecvf.com)
 
-[Project Page](https://people.eecs.berkeley.edu/~xdwang/projects/DebiasPL/) | [Preprint](https://arxiv.org/abs/2201.01490) | [Citation](#citation)
+[Project Page](https://people.eecs.berkeley.edu/~xdwang/projects/DebiasPL/) | [Paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_Debiased_Learning_From_Naturally_Imbalanced_Pseudo-Labels_CVPR_2022_paper.pdf) | [Preprint](https://arxiv.org/abs/2201.01490) | [Citation](#citation)
 
 <p align="center">
   <img src="https://github.com/frank-xwang/debiased-pseudo-labeling/blob/main/DebiasPL.gif" width=70%>
