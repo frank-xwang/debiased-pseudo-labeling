@@ -1,4 +1,4 @@
-# Debiased Pseudo-Labeling
+# DebiasPL: Debiased Pseudo-Labeling
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/debiased-learning-from-naturally-imbalanced/few-shot-image-classification-on-imagenet-0)](https://paperswithcode.com/sota/few-shot-image-classification-on-imagenet-0?p=debiased-learning-from-naturally-imbalanced)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/debiased-learning-from-naturally-imbalanced/semi-supervised-image-classification-on-16)](https://paperswithcode.com/sota/semi-supervised-image-classification-on-16?p=debiased-learning-from-naturally-imbalanced)
@@ -36,7 +36,7 @@ If you find our work inspiring or use our codebase in your research, please cons
 ```
 
 ## Updates
-[06/2022] Support DebiasPL w/ CLIP for more label-efficient learning. DebiasPL (ResNet50) achieves 71.3% top-1 accuray with only 1% labels on ImageNet!
+[06/2022] Support DebiasPL w/ CLIP for more label-efficient learning. DebiasPL (ResNet50) achieves 71.3% top-1 accuray on ImageNet only using 1% labels!
 
 [04/2022] Initial Commit. Support zero-shot learning and semi-supervised learning on ImageNet.
 
