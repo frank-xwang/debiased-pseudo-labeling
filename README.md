@@ -29,14 +29,15 @@ If you find our work inspiring or use our codebase in your research, please cons
   title={Debiased Learning from Naturally Imbalanced Pseudo-Labels},
   author={Wang, Xudong and Wu, Zhirong and Lian, Long and Yu, Stella X},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={},
+  pages={14647--14657},
   year={2022}
 }
 
 ```
 
 ## Updates
-[04/2022] Initial Commit.
+[06/2022] Support DebiasPL w/ CLIP for more label-efficient learning. DebiasPL (ResNet50) achieves 71.3% top-1 accuray with only 1% labels on ImageNet!
+[04/2022] Initial Commit. Support zero-shot learning and semi-supervised learning on ImageNet.
 
 ## Requirements
 ### Packages
@@ -83,14 +84,19 @@ bash scripts/0.2perc-ssl/train_DebiasPL.sh
 ```
 bash scripts/1perc-ssl/train_DebiasPL.sh
 ```
+1% labeled data (DebiasPL w/ CLIP, 100 epochs):
+```
+bash scripts/1perc-ssl/train_DebiasPL_w_CLIP.sh
+```
 
 | Method                | epochs            | 0.2% labels       | 1% labels 
 | --------------        | ----------------  | ----------------  | ----------------
 | FixMatch w/ EMAN      | 50                | 43.6%             | 60.9% 
 | DebiasPL (reported)   | 50                | 51.6%             | 65.3% 
 | DebiasPL (reproduced) | 50                | 52.0% [[checkpoint](https://drive.google.com/file/d/1_mCbwMokj8WFE5H0LN77TbuWxKLBdGRV/view?usp=sharing) \| [log](https://drive.google.com/file/d/1Wy6hJgvcuWc2sgwMq_fwq9OseTVVmgU9/view?usp=sharing)] | 65.6% [[checkpoint](https://drive.google.com/file/d/1QXO7icAonToHhjmBMNn3rwk7Qf1c0LG9/view?usp=sharing) \| [log](https://drive.google.com/file/d/1FmBJqb5YP1PZaQFW5AIFm4JO9c4xGcx8/view?usp=sharing)]
+| DebiasPL w/ CLIP (reproduced) | 100        |  -  | 71.3% [[checkpoint](https://drive.google.com/file/d/1VXt07-sjT0Ouqa1ANuZfH2L-KWA91lHw/view?usp=sharing) \| [log](https://drive.google.com/file/d/1gvPq_PzTwRFKplB3aUNrMSg8FUjMeFXi/view?usp=sharing)]
 
-The results reproduced by this codebase are often slightly higher than what was reported in the paper (52.0 vs 51.6; 65.6 vs. 65.3). We find it beneficial to apply cross-level instance-group discrimination loss [CLD](https://arxiv.org/pdf/2008.03813.pdf) to unlabeled instances to leverage their information fully. 
+The results reproduced by this codebase are often slightly higher than what was reported in the paper (52.0 vs 51.6; 65.6 vs. 65.3). We find it beneficial to apply cross-level instance-group discrimination loss [CLD](https://arxiv.org/pdf/2008.03813.pdf) to unlabeled instances to leverage their information fully.
 
 ### Zero-shot learning
 Please [download](https://drive.google.com/drive/folders/1mAB49eceMmu0hHfEofcNOCzi1nTxsEon?usp=sharing) zero-shot predictions with a pre-trained CLIP (backbone: RN50) model and put them under imagenet/indexes/. Then run experiments on ImageNet-1k with:

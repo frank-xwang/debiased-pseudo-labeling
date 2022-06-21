@@ -457,9 +457,6 @@ def main_worker(gpu, ngpus_per_node, args):
     clip_predictions = torch.load('imagenet/indexes/{}_clip_predictions_ranked.pth.tar'.format(args.trainindex_u.split('.csv')[0])) if args.use_clip else None
     clip_probs_list = clip_predictions['probs_list'].cuda() if args.use_clip else None
     clip_preds_list = clip_predictions['preds_list'].cuda() if args.use_clip else None
-    # clip_imagenet_index_list = clip_predictions['imagenet_index_list'].cuda() if args.use_clip else None
-    # clip_target_list = clip_predictions['target_list'].cuda() if args.use_clip else None
-    # clip_sampler_index_list = clip_predictions['sampler_index_list'].cuda() if args.use_clip else None
 
     for epoch in range(args.start_epoch, args.epochs):
         if epoch >= args.warmup_epoch:
@@ -629,8 +626,6 @@ def train(train_loader_x, train_loader_u, model, optimizer, epoch, args, qhat=No
         else:
             loss_u = (F.cross_entropy(logits_u_s, pseudo_targets_u, reduction='none', weight=per_cls_weights) * mask).mean()
         
-        # loss_u_ssl = F.cross_entropy(logits_u_s, pseudo_targets_u, reduction='none', weight=per_cls_weights) * mask
-        
         if args.use_clip:
             # add clip's predictions
             indexs_u = indexs_u.cuda(args.gpu, non_blocking=True)
@@ -639,8 +634,7 @@ def train(train_loader_x, train_loader_u, model, optimizer, epoch, args, qhat=No
             # add mask for clip with thresholding
             probs_list = clip_probs_list[indexs_u].cuda(args.gpu, non_blocking=True)
             max_probs, _ = torch.max(probs_list, dim=-1)
-            mask_clip = max_probs.ge(0.5).float()
-            
+            mask_clip = max_probs.ge(0.4).float()
             # apply clip predictions to low-confidence predictions
             mask_delta = (mask_clip - mask - mask1 - mask2).ge(0.01).float()
             loss_u_clip = [F.cross_entropy(logits_u, targets_u_clip, reduction='none', weight=per_cls_weights) * mask_delta for logits_u in logits_u_list]
@@ -655,7 +649,7 @@ def train(train_loader_x, train_loader_u, model, optimizer, epoch, args, qhat=No
             loss_cld = 0
 
         # total loss
-        loss = loss_x + args.lambda_u * loss_u + args.lambda_cld*loss_cld
+        loss = loss_x + args.lambda_u * loss_u + args.lambda_cld * loss_cld
 
         if mask.sum() > 0:
             # measure pseudo-label accuracy
