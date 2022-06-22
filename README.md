@@ -35,7 +35,7 @@ If you find our work inspiring or use our codebase in your research, please cons
 ```
 
 ## Updates
-[06/2022] Support DebiasPL w/ CLIP for more label-efficient learning. DebiasPL (ResNet50) achieves 71.3% top-1 accuray on ImageNet only using 1% labels!
+[06/2022] Support DebiasPL w/ CLIP for more label-efficient learning. DebiasPL (ResNet50) achieves 69.6% (71.3%) top-1 accuray on ImageNet only using 0.2% (1%) labels!
 
 [04/2022] Initial Commit. Support zero-shot learning and semi-supervised learning on ImageNet.
 
