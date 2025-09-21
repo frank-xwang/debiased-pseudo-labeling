@@ -93,9 +93,9 @@ bash scripts/1perc-ssl/train_DebiasPL_w_CLIP.sh
 | --------------        | ----------------    | ----------------  | ----------------  | ----------------
 | FixMatch w/ EMAN      | RN50                | 50                | 43.6%             | 60.9% 
 | DebiasPL (reported)   | RN50                | 50                | 51.6%             | 65.3% 
-| DebiasPL (reproduced) | RN50                | 50                | 52.0% [[ckpt](https://drive.google.com/file/d/1_mCbwMokj8WFE5H0LN77TbuWxKLBdGRV/view?usp=sharing) \| [log](https://drive.google.com/file/d/1Wy6hJgvcuWc2sgwMq_fwq9OseTVVmgU9/view?usp=sharing)] | 65.6% [[ckpt](https://drive.google.com/file/d/1QXO7icAonToHhjmBMNn3rwk7Qf1c0LG9/view?usp=sharing) \| [log](https://drive.google.com/file/d/1FmBJqb5YP1PZaQFW5AIFm4JO9c4xGcx8/view?usp=sharing)]
-| DebiasPL w/ CLIP (reproduced) | RN50                | 50         |  69.6% [[ckpt](https://drive.google.com/file/d/1kvnFjTXzYzmkxcOLRJvLq1KtYWfaeGEe/view?usp=sharing) \| [log](https://drive.google.com/file/d/1TRYOHFWUWyBPN0w3Hsb4IwbVZd3uC9DC/view?usp=sharing)] | - 
-| DebiasPL w/ CLIP (reproduced) | RN50                | 100        |  70.4% [[ckpt](https://drive.google.com/file/d/1jnnCNBwSgt-EbS7ZISDWmqm4e9eoOfrB/view?usp=sharing) \| [log](https://drive.google.com/file/d/1vLFwI0157Wh5y-J9yahe6hDa194kMDVq/view?usp=sharing)]  | 71.3% [[ckpt](https://drive.google.com/file/d/1VXt07-sjT0Ouqa1ANuZfH2L-KWA91lHw/view?usp=sharing) \| [log](https://drive.google.com/file/d/1gvPq_PzTwRFKplB3aUNrMSg8FUjMeFXi/view?usp=sharing)]
+| DebiasPL (reproduced) | RN50                | 50                | 52.0% [[ckpt](https://drive.google.com/file/d/10cZ8nmdKyOJpSk8Mgs7PbzVySKm5yDRB/view?usp=sharing) \| [log](https://drive.google.com/file/d/1Wy6hJgvcuWc2sgwMq_fwq9OseTVVmgU9/view?usp=sharing)] | 65.6% [[ckpt](https://drive.google.com/file/d/1o2MYjkf-G_NGNHqMdXdYQWr2X_catw2Q/view?usp=sharing) \| [log](https://drive.google.com/file/d/1FmBJqb5YP1PZaQFW5AIFm4JO9c4xGcx8/view?usp=sharing)]
+| DebiasPL w/ CLIP (reproduced) | RN50                | 50         |  69.6% [[ckpt](https://drive.google.com/file/d/1xCYEmnusFy4rNwPznshbIyONIgSMEwMo/view?usp=drive_link) \| [log](https://drive.google.com/file/d/1TRYOHFWUWyBPN0w3Hsb4IwbVZd3uC9DC/view?usp=sharing)] | - 
+| DebiasPL w/ CLIP (reproduced) | RN50                | 100        |  70.4% [[ckpt](https://drive.google.com/file/d/1chbCaw0BX14bX8kdbZchBeiwaHaVL4Ib/view?usp=drive_link) \| [log](https://drive.google.com/file/d/1vLFwI0157Wh5y-J9yahe6hDa194kMDVq/view?usp=sharing)]  | 71.3% [[ckpt](https://drive.google.com/file/d/1S4ZhMTICtRipCv3Yp61yR_WoFxy3NRwG/view?usp=sharing) \| [log](https://drive.google.com/file/d/1gvPq_PzTwRFKplB3aUNrMSg8FUjMeFXi/view?usp=sharing)]
 
 The results reproduced by this codebase are often slightly higher than what was reported in the paper (52.0 vs 51.6; 65.6 vs. 65.3). We find it beneficial to apply cross-level instance-group discrimination loss [CLD](https://arxiv.org/pdf/2008.03813.pdf) to unlabeled instances to leverage their information fully.
 
@@ -110,7 +110,7 @@ bash scripts/zsl/train_DebiasPL.sh
 | CLIP                  | RN50              | -                 | 59.6%         
 | CLIP                  | ViT-Base/32       | -                 | 63.2%   
 | DebiasPL (reported)   | RN50              | 100               | 68.3%
-| DebiasPL (reproduced) | RN50              | 50                | 68.7% [[ckpt](https://drive.google.com/file/d/1fFpLi8WlYy-ByFIV0wPg4r9F-X-W0hhL/view?usp=sharing) \| [log](https://drive.google.com/file/d/19LErjfTtkyOtZb4gae8ODR-lWnWF95Kn/view?usp=sharing)]
+| DebiasPL (reproduced) | RN50              | 50                | 68.7% [[ckpt](https://drive.google.com/file/d/1UB_9c-2Hr0YVkg_qq24f_D9tsJHT7EjY/view?usp=sharing) \| [log](https://drive.google.com/file/d/19LErjfTtkyOtZb4gae8ODR-lWnWF95Kn/view?usp=sharing)]
 
 ## How to get support from us?
 If you have any general questions, feel free to email us at `xdwang at eecs.berkeley.edu`. If you have code or implementation-related questions, please feel free to send emails to us or open an issue in this codebase (We recommend that you open an issue in this codebase, because your questions may help others). 
